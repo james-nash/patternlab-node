@@ -1,0 +1,17 @@
+/*
+  This test file deliberately does NOT include any media queries.
+
+  A bug in media_hunter.js (see https://github.com/pattern-lab/edition-node-gulp/issues/54)
+  meant that CSS files without media queries would cause patternlab builds to fail.
+
+  With the fix applied, the build will succeed.
+
+  Since the MediaHunter scans directories and processes all CSS files it finds, all of the
+  existing test cases in media_hunter_tests.js will now also process this file. There is
+  therefore no need to write an additional test - the presence of this CSS file acts as
+  the test.
+*/
+
+body {
+  color: purple;
+}
